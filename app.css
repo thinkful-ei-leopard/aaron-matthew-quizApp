@@ -33,8 +33,17 @@ button {
     width: 100px;
     padding: 5px;
     margin: 0 auto;
+    margin-top: 20px;
 }
   
 button:hover {
     cursor: pointer;
+}
+
+.answer {
+    padding: 5px;
+    text-align: left;
+    
+   
+
 }

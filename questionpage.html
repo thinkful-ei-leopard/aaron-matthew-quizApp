@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz App</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+      <div class="head-container">
+          <h1>The Marvelous Baseball Quiz!</h1>
+      </div>
+  </header>
+
+  <main>
+    <div class="quiz-container">
+        <h1> Question 1 of 5</h1>
+        <img src="https://media.npr.org/assets/img/2012/09/19/innings_custom-7ac3a084c9d60e283f767de1a5987d11b4128d3d-s800-c85.jpg" alt="Baseball Quiz Logo"/>
+       
+       <form id=quiz-question>
+        
+        <h3>How many innings are in a normal length MLB game?</h3>
+      
+        
+        <input type="radio" name="number" value="9"> <span class="answer">9</span> <br>
+        <input type="radio" name="number" value="11"><span class="answer">10</span><br>
+        <input type="radio" name="number" value="12"><span class="answer">11</span><br> 
+        <input type="radio" name="number" value="18"><span class="answer">18</span><br>
+        
+        '<button class="next-button" type="submit"> 
+            <span class="button-label">Submit</span>
+        </button>
+
+        </form>
+        
+        
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
