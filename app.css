@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 350px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.head-container {
+    text-align: center;
+    border: 1px solid black
+}
+
+div.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+    margin: 0 auto;
+}
+  
+button:hover {
+    cursor: pointer;
+}
