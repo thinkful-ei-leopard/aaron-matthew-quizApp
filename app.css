@@ -29,6 +29,11 @@ div.quiz-container {
     text-align: center;
 }
 
+.answer {
+    padding: 5px;
+    text-align: left;
+}
+
 button {
     width: 100px;
     padding: 5px;
@@ -38,12 +43,4 @@ button {
   
 button:hover {
     cursor: pointer;
-}
-
-.answer {
-    padding: 5px;
-    text-align: left;
-    
-   
-
 }
