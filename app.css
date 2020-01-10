@@ -13,6 +13,7 @@ h1 {
 
 img {
     max-width: 350px;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -29,7 +30,13 @@ div.quiz-container {
     text-align: center;
 }
 
+.question {
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .answer {
+    display: block;
     padding: 5px;
     text-align: left;
 }
