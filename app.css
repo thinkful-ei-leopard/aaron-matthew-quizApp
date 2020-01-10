@@ -4,7 +4,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding: 10px;
 }
 
 h1 {
@@ -20,7 +19,7 @@ img {
 
 div.head-container {
     text-align: center;
-    border: 1px solid black
+    border-bottom: 1px solid black;
 }
 
 div.quiz-container {
@@ -50,4 +49,18 @@ button {
   
 button:hover {
     cursor: pointer;
+}
+
+main::after {
+    content: "";
+    background-image: url("/imgs/background-min.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
 }
