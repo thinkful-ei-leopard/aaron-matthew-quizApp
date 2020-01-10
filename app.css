@@ -11,23 +11,24 @@ body {
 
 h1 {
     margin-bottom: 20px;
+    color: #202E65;
 }
 
 img {
-    max-width: 350px;
+    max-width: 250px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-div.head-container {
+.head-container {
     text-align: center;
     border-bottom: 1px solid black;
 }
 
-div.quiz-container {
-    max-width: 600px;
-    margin: 0 auto;
+.quiz-container {
+    max-width: 680px;
+    margin: auto auto;
     padding: 10px;
     text-align: center;
 }
@@ -35,30 +36,36 @@ div.quiz-container {
 .question {
     font-weight: bold;
     font-size: 25px;
+    color: #ED1A32;
 }
 
 .answer {
     display: block;
     padding: 5px;
     text-align: left;
+    color: #202E65;
 }
 
-button {
+.button {
     width: 100px;
-    padding: 5px;
+    padding: 10px;
+    background-color: #202E65;
+    color: white;
+    border-radius: 10px;
     margin: 0 auto;
     margin-top: 20px;
 }
   
-button:hover {
+.button:hover {
     cursor: pointer;
 }
 
 main::after {
     content: "";
-    background-image: url("../imgs/background-min.jpg");
+    background-image: url("./imgs/background-min.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     opacity: 0.5;
     top: 0;
     left: 0;

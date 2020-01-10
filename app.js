@@ -126,9 +126,9 @@ function handlePlayAgain() {
 // Generates the HTML String for the Start Page
 function generateStartPageString() {
   return `<div class="quiz-container">
-  <img src="../imgs/startpage-min.png" alt="Image of Baseball Quiz Logo"/>
+  <img src="./imgs/startpage-min.png" alt="Image of Baseball Quiz Logo"/>
   <p class="question">How well do YOU know baseball?</p>
-  <button class="start-button">
+  <button class="start-button button">
       <label class="button-label" for="next-button">Play Ball!</label>
   </button>
 </div>`;
@@ -139,7 +139,7 @@ function generateQuestionPageString() {
   let questionIndex = STORE.questions[STORE.questionNumber - 1];
   return `<div class="quiz-container">
   <h1> Question ${STORE.questionNumber} of ${STORE.questions.length}</h1>
-  <img src="../imgs/question${STORE.questionNumber}-min.jpg" alt="${questionIndex.imageAlt}"/>
+  <img src="./imgs/question${STORE.questionNumber}-min.jpg" alt="${questionIndex.imageAlt}"/>
    
   <form id=quiz-question>
     
@@ -162,7 +162,7 @@ function generateQuestionPageString() {
       D: ${questionIndex.answers[3]}
     </label>
 
-    <input class="submit-button" type="submit" value="Submit">
+    <input class="submit-button button" type="submit" value="Submit">
   </form>
 </div>`;
 }
@@ -172,11 +172,11 @@ function generateCorrectPageString() {
   return `<div class="quiz-container">
   <h1>Correct!</h1>
 
-  <img src="../imgs/correctpage-min.jpg" alt="Image of Crowd Cheering at Baseball Stadium"/>
+  <img src="./imgs/correctpage-min.jpg" alt="Image of Crowd Cheering at Baseball Stadium"/>
  
-  <p class="score">SCORE: ${STORE.score} / ${STORE.questionNumber}</p>
+  <p class="score">You have answered ${STORE.score} out of ${STORE.questionNumber} questions correct.</p>
 
-  <button class="next-button"> 
+  <button class="next-button button"> 
       <span class="button-label">Next</span>
   </button>
 </div>`;
@@ -187,13 +187,13 @@ function generateWrongPageString() {
   return `<div class="quiz-container">
   <h1>Incorrect!</h1>
 
-  <img src="../imgs/wrongpage-min.png" alt="Image of Baseball player frowning"/>
+  <img src="./imgs/wrongpage-min.png" alt="Image of Baseball player frowning"/>
  
-  <p class="correct-answer">The Correct answer was ${STORE.questions[STORE.questionNumber - 1].correctAnswer}</p>
+  <p class="correct-answer">The Correct answer was <span class="correct-answer">${STORE.questions[STORE.questionNumber - 1].correctAnswer}</span></p>
 
-  <p class="score">SCORE: ${STORE.score} / ${STORE.questionNumber}</p>
+  <p class="score">You have answered ${STORE.score} out of ${STORE.questionNumber} questions correct.</p>
 
-  <button class="next-button"> 
+  <button class="next-button button"> 
       <span class="button-label">Next</span>
   </button>
 </div>`;
@@ -204,12 +204,12 @@ function generateEndPageString() {
   return `<div class="quiz-container">
   <h1>Game Over!</h1>
 
-  <img src="../imgs/endpage-min.jpg" alt="Image of Derek Jeter saying his farewells"/>
+  <img src="./imgs/endpage-min.jpg" alt="Image of Derek Jeter saying his farewells"/>
  
   <h2>Answers Correct: ${STORE.score}</h2>
   <h2>Answers Incorrect: ${STORE.questions.length - STORE.score}</h2>
 
-  <button class="again-button">
+  <button class="again-button button">
       <span class="button-label">Play Again?</span>
   </button>
 </div>`;
