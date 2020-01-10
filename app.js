@@ -174,7 +174,7 @@ function generateCorrectPageString() {
 
   <img src="./imgs/correctpage-min.jpg" alt="Image of Crowd Cheering at Baseball Stadium"/>
  
-  <p class="score">You have answered ${STORE.score} out of ${STORE.questionNumber} questions correct.</p>
+  <p class="blue">You have answered <span class="red">${STORE.score}</span> out of <span class="red">${STORE.questionNumber}</span> questions correct.</p>
 
   <button class="next-button button"> 
       <span class="button-label">Next</span>
@@ -189,9 +189,9 @@ function generateWrongPageString() {
 
   <img src="./imgs/wrongpage-min.png" alt="Image of Baseball player frowning"/>
  
-  <p class="correct-answer">The Correct answer was <span class="correct-answer">${STORE.questions[STORE.questionNumber - 1].correctAnswer}</span></p>
+  <p class="blue">The Correct answer was <span class="red">${STORE.questions[STORE.questionNumber - 1].correctAnswer}</span></p>
 
-  <p class="score">You have answered ${STORE.score} out of ${STORE.questionNumber} questions correct.</p>
+  <p class="blue">You have answered <span class="red">${STORE.score}</span> out of <span class="red">${STORE.questionNumber}</span> questions correct.</p>
 
   <button class="next-button button"> 
       <span class="button-label">Next</span>
@@ -206,8 +206,8 @@ function generateEndPageString() {
 
   <img src="./imgs/endpage-min.jpg" alt="Image of Derek Jeter saying his farewells"/>
  
-  <h2>Answers Correct: ${STORE.score}</h2>
-  <h2>Answers Incorrect: ${STORE.questions.length - STORE.score}</h2>
+  <p class="blue">Answers Correct: <span class="red">${STORE.score}</span></p>
+  <p class="blue">Answers Incorrect: <span class="red">${STORE.questions.length - STORE.score}</span></p>
 
   <button class="again-button button">
       <span class="button-label">Play Again?</span>

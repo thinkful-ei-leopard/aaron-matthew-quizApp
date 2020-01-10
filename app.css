@@ -74,3 +74,13 @@ main::after {
     position: fixed;
     z-index: -1;
 }
+
+.blue {
+    color: #202E65;
+    font-size: 20px;
+}
+
+.red {
+    color: #ED1A32;
+    font-size: 20px;
+}
