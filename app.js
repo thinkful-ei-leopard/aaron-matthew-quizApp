@@ -11,7 +11,7 @@ const STORE = {
         '15'
       ],
       correctAnswer: '9',
-      imageAlt: 'View of scorebard from baseball game'
+      imageAlt: 'Image of scorebard from baseball game'
     },
     {
       question: 'How many players are on the field during a baseball game?',
@@ -22,7 +22,7 @@ const STORE = {
         '9'
       ],
       correctAnswer: '9',
-      imageAlt: 'Mesh of players on a Baseball Field'
+      imageAlt: 'Image of a mesh of players on a Baseball Field'
     },
     {
       question: 'How many strikes does a batter get per at-bat?',
@@ -33,7 +33,7 @@ const STORE = {
         '2'
       ],
       correctAnswer: '3',
-      imageAlt: 'Batter swinging and missing a pitch'
+      imageAlt: 'Image of a batter swinging and missing a pitch'
     },
     {
       question: 'What is the term for when a ball is hit over the outfield fence?',
@@ -44,7 +44,7 @@ const STORE = {
         'Birdie'
       ],
       correctAnswer: 'Home Run',
-      imageAlt: 'Crowd trying to catch ball in outfield seats'
+      imageAlt: 'Image of crowd trying to catch ball in outfield seats'
     },
     {
       question: 'What does MLB stand for?',
@@ -55,7 +55,7 @@ const STORE = {
         'Minor League Baseball'
       ],
       correctAnswer: 'Major League Baseball',
-      imageAlt: 'MLB Logo'
+      imageAlt: 'Image of the MLB Logo'
     },
   ],
   questionNumber: 0,
@@ -86,7 +86,7 @@ function handleStartQuiz() {
 
 // Handles event for when 'Submit' button is clicked on Question Page
 function handleQuestionSubmit() {
-  $('main').on('click', '.submit-button', event => {
+  $('main').on('submit', '#quiz-question', event => {
     event.preventDefault();
     let userChoice = $('input[name=answer]:checked', '#quiz-question').val();
     let correct = STORE.questions[STORE.questionNumber - 1].correctAnswer;
@@ -126,7 +126,7 @@ function handlePlayAgain() {
 // Generates the HTML String for the Start Page
 function generateStartPageString() {
   return `<div class="quiz-container">
-  <img src="/imgs/startpage-min.png" alt="Baseball Quiz Logo"/>
+  <img src="../imgs/startpage-min.png" alt="Image of Baseball Quiz Logo"/>
   <p class="question">How well do YOU know baseball?</p>
   <button class="start-button">
       <label class="button-label" for="next-button">Play Ball!</label>
@@ -139,32 +139,30 @@ function generateQuestionPageString() {
   let questionIndex = STORE.questions[STORE.questionNumber - 1];
   return `<div class="quiz-container">
   <h1> Question ${STORE.questionNumber} of ${STORE.questions.length}</h1>
-  <img src="/imgs/question${STORE.questionNumber}-min.jpg" alt="${questionIndex.imageAlt}"/>
+  <img src="../imgs/question${STORE.questionNumber}-min.jpg" alt="${questionIndex.imageAlt}"/>
    
   <form id=quiz-question>
     
     <p class="question">${questionIndex.question}</p>
     
     <label for="answer1" class="answer">
-      <input id="answer1" type="radio" name="answer" value="${questionIndex.answers[0]}" tabindex="1" required> 
+      <input id="answer1" type="radio" name="answer" value="${questionIndex.answers[0]}" required> 
       A: ${questionIndex.answers[0]}
     </label>
     <label for="answer2" class="answer">
-      <input id="answer2" type="radio" name="answer" value="${questionIndex.answers[1]}" tabindex="2" required> 
+      <input id="answer2" type="radio" name="answer" value="${questionIndex.answers[1]}" required> 
       B: ${questionIndex.answers[1]}
     </label>
     <label for="answer3" class="answer">
-      <input id="answer3" type="radio" name="answer" value="${questionIndex.answers[2]}" tabindex="3" required> 
+      <input id="answer3" type="radio" name="answer" value="${questionIndex.answers[2]}" required> 
       C: ${questionIndex.answers[2]}
     </label>
     <label for="answer4" class="answer">
-      <input id="answer4" type="radio" name="answer" value="${questionIndex.answers[3]}" tabindex="4" required> 
+      <input id="answer4" type="radio" name="answer" value="${questionIndex.answers[3]}" required> 
       D: ${questionIndex.answers[3]}
     </label>
-  
-    <button class="submit-button" type="submit"> 
-        <label for="submit-button">Submit</label>
-    </button>
+
+    <input class="submit-button" type="submit" value="Submit">
   </form>
 </div>`;
 }
@@ -174,7 +172,7 @@ function generateCorrectPageString() {
   return `<div class="quiz-container">
   <h1>Correct!</h1>
 
-  <img src="/imgs/correctpage-min.jpg" alt="Crowd Cheering at Baseball Stadium"/>
+  <img src="../imgs/correctpage-min.jpg" alt="Image of Crowd Cheering at Baseball Stadium"/>
  
   <p class="score">SCORE: ${STORE.score} / ${STORE.questionNumber}</p>
 
@@ -189,7 +187,7 @@ function generateWrongPageString() {
   return `<div class="quiz-container">
   <h1>Incorrect!</h1>
 
-  <img src="imgs/wrongpage-min.png" alt="Baseball player frowning"/>
+  <img src="../imgs/wrongpage-min.png" alt="Image of Baseball player frowning"/>
  
   <p class="correct-answer">The Correct answer was ${STORE.questions[STORE.questionNumber - 1].correctAnswer}</p>
 
@@ -206,7 +204,7 @@ function generateEndPageString() {
   return `<div class="quiz-container">
   <h1>Game Over!</h1>
 
-  <img src="/imgs/endpage-min.jpg" alt="Derek Jeter saying his farewells"/>
+  <img src="../imgs/endpage-min.jpg" alt="Image of Derek Jeter saying his farewells"/>
  
   <h2>Answers Correct: ${STORE.score}</h2>
   <h2>Answers Incorrect: ${STORE.questions.length - STORE.score}</h2>

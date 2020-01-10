@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Carter One', cursive;
-
 }
 
 h1 {
@@ -57,7 +56,7 @@ button:hover {
 
 main::after {
     content: "";
-    background-image: url("/imgs/background-min.jpg");
+    background-image: url("../imgs/background-min.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     opacity: 0.5;
