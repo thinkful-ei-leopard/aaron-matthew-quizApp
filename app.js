@@ -10,7 +10,8 @@ const STORE = {
         '9',
         '15'
       ],
-      correctAnswer: '9'
+      correctAnswer: '9',
+      imageAlt: 'View of scorebard from baseball game'
     },
     {
       question: 'How many players are on the field during a baseball game?',
@@ -20,7 +21,8 @@ const STORE = {
         '7',
         '9'
       ],
-      correctAnswer: '9'
+      correctAnswer: '9',
+      imageAlt: 'Mesh of players on a Baseball Field'
     },
     {
       question: 'How many strikes does a batter get per at-bat?',
@@ -30,7 +32,8 @@ const STORE = {
         '3',
         '2'
       ],
-      correctAnswer: '3'
+      correctAnswer: '3',
+      imageAlt: 'Batter swinging and missing a pitch'
     },
     {
       question: 'What is the term for when a ball is hit over the outfield fence?',
@@ -40,7 +43,8 @@ const STORE = {
         'Slam Dunk',
         'Birdie'
       ],
-      correctAnswer: 'Home Run'
+      correctAnswer: 'Home Run',
+      imageAlt: 'Crowd trying to catch ball in outfield seats'
     },
     {
       question: 'What does MLB stand for?',
@@ -50,7 +54,8 @@ const STORE = {
         'Matt Likes Baseball',
         'Minor League Baseball'
       ],
-      correctAnswer: 'Major League Baseball'
+      correctAnswer: 'Major League Baseball',
+      imageAlt: 'MLB Logo'
     },
   ],
   questionNumber: 0,
@@ -134,26 +139,26 @@ function generateQuestionPageString() {
   let questionIndex = STORE.questions[STORE.questionNumber - 1];
   return `<div class="quiz-container">
   <h1> Question ${STORE.questionNumber} of ${STORE.questions.length}</h1>
-  <img src="/imgs/question${STORE.questionNumber}-min.jpg"/>
+  <img src="/imgs/question${STORE.questionNumber}-min.jpg" alt="${questionIndex.imageAlt}"/>
    
   <form id=quiz-question>
     
     <p class="question">${questionIndex.question}</p>
     
     <label for="answer1" class="answer">
-      <input id="answer1" type="radio" name="answer" value="${questionIndex.answers[0]}"> 
+      <input id="answer1" type="radio" name="answer" value="${questionIndex.answers[0]}" tabindex="1" required> 
       A: ${questionIndex.answers[0]}
     </label>
     <label for="answer2" class="answer">
-      <input id="answer2" type="radio" name="answer" value="${questionIndex.answers[1]}"> 
+      <input id="answer2" type="radio" name="answer" value="${questionIndex.answers[1]}" tabindex="2" required> 
       B: ${questionIndex.answers[1]}
     </label>
     <label for="answer3" class="answer">
-      <input id="answer3" type="radio" name="answer" value="${questionIndex.answers[2]}"> 
+      <input id="answer3" type="radio" name="answer" value="${questionIndex.answers[2]}" tabindex="3" required> 
       C: ${questionIndex.answers[2]}
     </label>
     <label for="answer4" class="answer">
-      <input id="answer4" type="radio" name="answer" value="${questionIndex.answers[3]}"> 
+      <input id="answer4" type="radio" name="answer" value="${questionIndex.answers[3]}" tabindex="4" required> 
       D: ${questionIndex.answers[3]}
     </label>
   
